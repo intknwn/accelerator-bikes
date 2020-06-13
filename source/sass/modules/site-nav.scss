@@ -1,0 +1,31 @@
+.site-nav {
+  margin-bottom: 256px;
+
+  &--opened {
+    position: relative;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .site-nav {
+    margin-bottom: 108px;
+
+    background-color: #ffffff;
+
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: block;
+      position: absolute;
+
+      width: 100%;
+
+      top: 0;
+      left: 0;
+
+      z-index: 1;
+    }
+  }
+}

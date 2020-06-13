@@ -1,0 +1,163 @@
+.site-footer {
+  padding-top: 153px;
+  padding-bottom: 98px;
+}
+
+.site-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer h2 {
+  margin-left: -5px;
+  margin-bottom: 30px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+
+  color: #1f1f1f;
+}
+
+.site-footer p {
+  width: 555px;
+
+  margin-left: -10px;
+  margin-bottom: 38px;
+
+  font-size: 17px;
+  line-height: 31px;
+  letter-spacing: 0.3px;
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.site-footer img {
+  margin-bottom: 40px;
+}
+
+.site-footer__contacts {
+  box-sizing: border-box;
+  width: 957px;
+  padding-left: 237px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.site-footer a {
+  position: relative;
+
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.site-footer a:hover {
+  color: #0ad9c6;
+}
+
+.site-footer__email {
+  margin-right: 127px;
+  letter-spacing: 0.5px;
+
+  &::before {
+    content: url("../../img/icon-mail.svg");
+    position: absolute;
+    top: 0;
+    left: -40px;
+  }
+}
+
+.site-footer__phone {
+  &::before {
+    content: url("../../img/icon-phone.svg");
+    position: absolute;
+    top: -2px;
+    left: -36px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .site-footer {
+    padding-bottom: 45px;
+  }
+
+  .site-footer img {
+    margin-bottom: 18px;
+    width: 698px;
+    height: 545px;
+  }
+
+  .site-footer__contacts {
+    width: 698px;
+    padding-left: 111px;
+  }
+
+  .site-footer h2 {
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .site-footer p {
+    width: 698px;
+    margin-bottom: 20px;
+    margin-left: 0;
+
+    font-size: 17px;
+    line-height: 31px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .site-footer {
+    padding-bottom: 35px;
+  }
+
+  .site-footer img {
+    margin-bottom: 30px;
+    width: 320px;
+    height: 250px;
+  }
+
+  .site-footer h2 {
+    font-size: 18px;
+  }
+
+  .site-footer p {
+    width: 270px;
+  }
+
+  .site-footer__contacts {
+    flex-direction: column;
+    width: 320px;
+    padding-left: 0;
+  }
+
+  .site-footer__email {
+    padding-left: 72px;
+    margin-right: 0;
+    margin-bottom: 22px;
+
+    &::before {
+      left: 31px;
+    }
+  }
+
+  .site-footer__phone {
+    padding-left: 97px;
+
+    &::before {
+      left: 60px;
+    }
+  }
+}
