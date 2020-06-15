@@ -84,7 +84,7 @@ p {
 
 .site-header__description h1 {
   margin-bottom: 23px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 46px;
   line-height: 64px;
   letter-spacing: 0.035em; }
@@ -331,7 +331,8 @@ p {
   border: none;
   border-radius: 4px; }
   .contact-form button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    opacity: 0.7; }
 
 @media (max-width: 1023px) {
   .contact-form__input {
@@ -800,6 +801,8 @@ p {
   background-color: transparent;
   border: none;
   cursor: pointer; }
+  .video__play-button:hover {
+    opacity: 0.7; }
   .video__play-button:active {
     width: 55px;
     height: 55px;

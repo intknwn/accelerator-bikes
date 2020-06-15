@@ -12,6 +12,7 @@
   <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-600.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -21,10 +22,10 @@
       </button>
       <nav class="site-nav site-nav--nojs">
         <ul class="site-nav__list links-list">
-          <li class="links-list__item"><a href="#">О нас</a></li>
-          <li class="links-list__item"><a href="#">Виды велосипедов</a></li>
-          <li class="links-list__item"><a href="#">Видео про велосипеды</a></li>
-          <li class="links-list__item"><a href="#">Контакты</a></li>
+          <li class="links-list__item"><a onclick="$('.facts').animatescroll();" href="#">О нас</a></li>
+          <li class="links-list__item"><a onclick="$('.bike-types').animatescroll();" href="#">Виды велосипедов</a></li>
+          <li class="links-list__item"><a onclick="$('.video').animatescroll();" href="#">Видео про велосипеды</a></li>
+          <li class="links-list__item"><a onclick="$('.site-footer').animatescroll();" href="#">Контакты</a></li>
         </ul>
       </nav>
       <div class="site-header__sections-wrapper">
@@ -86,11 +87,11 @@
               <source type="image/webp" srcset="img/bike01-desktop@1x.webp 1x, img/bike01-desktop@2x.webp 2x">
 
               <source media="(max-width: 1023px)"
-                srcset="img/bike01-tablet@1x.png 1x, img/bike01-tablet@2x.png 2x">
+                srcset="img/bike01-tablet@1x.jpg 1x, img/bike01-tablet@2x.jpg 2x">
               <source media="(max-width: 767px)"
-                srcset="img/bike01-mobile@1x.png 1x, img/bike01-mobile@2x.png 2x">
+                srcset="img/bike01-mobile@1x.jpg 1x, img/bike01-mobile@2x.jpg 2x">
               <!-- 1х: 342px; 2x: 684px -->
-              <img src="img/bike01-desktop@1x.png" width="342" height="503" srcset="img/bike01-desktop@2x.png 2x" alt="Дорожный велосипед">
+              <img src="img/bike01-desktop@1x.jpg" width="342" height="503" srcset="img/bike01-desktop@2x.jpg 2x" alt="Дорожный велосипед">
             </picture>
             <h3>Дорожный велосипед</h3>
           </li>
