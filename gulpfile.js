@@ -100,7 +100,7 @@ gulp.task('vendor', function () {
     base: 'source'
   })
       .pipe(concat('vendor.js'))
-      .pipe(gulp.dest('build/js/vendor'));
+      .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('clean', function () {
