@@ -47,22 +47,22 @@
 }
 
 @media (max-width: $tablet-width) {
-  .contact-form__input {
+  .contact-form input {
     padding-top: 3px;
     padding-left: 20px;
   }
 
-  .contact-form__input::-webkit-input-placeholder {
+  .contact-form input::-webkit-input-placeholder {
     letter-spacing: 0.3px;
   }
 
-  .contact-form__button {
+  .contact-form button {
     letter-spacing: -0.05px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .contact-form__input {
+  .contact-form input {
     padding-left: 25px;
   }
 }

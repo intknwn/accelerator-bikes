@@ -4,7 +4,7 @@
 
 .bike-types__container {
   padding-top: 154px;
-  padding-bottom: 145px;
+  padding-bottom: 95px;
 
   display: flex;
   flex-direction: column;
@@ -15,9 +15,9 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
-  width: 1126px;
+  max-width: 1440px;
 
   padding-left: 25px;
 }
@@ -38,6 +38,11 @@
   position: relative;
   text-align: center;
 
+  padding-right: 25px;
+  padding-left: 25px;
+
+  margin-bottom: 50px;
+
   &--roadster {
     padding-top: 10px;
     z-index: 1;
@@ -47,7 +52,7 @@
       display: block;
       position: absolute;
       top: 166px;
-      left: -60px;
+      left: -35px;
 
       width: 180px;
       height: 180px;
@@ -68,7 +73,7 @@
       display: block;
       position: absolute;
       top: 26px;
-      left: -14px;
+      left: 11px;
 
       width: 37px;
       height: 37px;
@@ -81,7 +86,7 @@
       display: block;
       position: absolute;
       top: 581px;
-      right: -23px;
+      right: 2px;
 
       width: 47px;
       height: 47px;
@@ -97,7 +102,7 @@
       display: block;
       position: absolute;
       top: -32px;
-      right: -36px;
+      right: -11px;
 
       width: 95px;
       height: 95px;
@@ -127,7 +132,7 @@
 @media (max-width: $tablet-width) {
   .bike-types__container {
     padding-top: 52px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 
   .bike-types h2 {
@@ -144,19 +149,18 @@
 
     width: 100%;
 
-    padding-left: 50px;
+    padding-left: 0;
   }
 
   .bike-types__list-item {
-    margin-right: 50px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 
     &--roadster {
       padding-top: 0;
 
       &::before {
         top: 200px;
-        left: -36px;
+        left: -11px;
 
         width: 127px;
         height: 127px;
@@ -177,7 +181,7 @@
     &--kids {
       &::before {
         top: -20px;
-        right: -25px;
+        right: 0;
 
         width: 68px;
         height: 68px;
@@ -194,7 +198,7 @@
 
 @media (max-width: $mobile-width) {
   .bike-types__container {
-    padding-top: 53px;
+    padding-top: 50px;
     padding-bottom: 12px;
   }
 
@@ -204,15 +208,19 @@
     &--roadster {
       &::before {
         top: 200px;
-        left: -23px;
+        left: 2px;
       }
     }
 
     &--kids {
       &::before {
         top: -20px;
-        right: -15px;
+        right: 10px;
       }
     }
+  }
+
+  .bike-types h2 {
+    margin-bottom: 30px;
   }
 }

@@ -13,7 +13,7 @@
   box-sizing: border-box;
 
   padding-right: 280px;
-  padding-bottom: 238px;
+  padding-bottom: 137px;
   padding-left: 280px;
 
   background-image: url("../img/header-bg-desktop@1x.jpg");
@@ -27,6 +27,7 @@
 
 .site-header__sections-wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -38,6 +39,8 @@
 
 .site-header__description {
   width: 400px;
+  margin-right: 153px;
+  margin-bottom: 100px;
 }
 
 .site-header__description h1 {
@@ -58,11 +61,21 @@
 }
 
 .site-header__contact {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+
   padding-top: 5px;
-  width: 327px;
 }
 
 .site-header__contact p {
+  align-self: center;
+
+  width: 327px;
+
   margin-bottom: 18px;
 
   font-weight: 600;
@@ -97,7 +110,9 @@
 
     width: 100%;
 
+    margin-right: 0;
     margin-bottom: 67px;
+
     padding-bottom: 78px;
 
     text-align: center;
@@ -123,7 +138,7 @@
     background-image: url("../img/icon-menu-close.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: transparent; /* #0ad9c6; */
+    background-color: transparent;
 
     border: none;
     cursor: pointer;
@@ -191,11 +206,17 @@
     width: 288px;
   }
 
+  .site-header__description h1 {
+    width: 288px;
+  }
+
   .site-header__contact {
+    min-width: 0;
     width: 288px;
   }
 
   .site-header__contact p {
+    width: 288px;
     margin-bottom: 18px;
   }
 }

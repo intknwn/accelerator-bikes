@@ -54,7 +54,7 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-right: 280px;
-  padding-bottom: 238px;
+  padding-bottom: 137px;
   padding-left: 280px;
   background-image: url("../img/header-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
@@ -67,6 +67,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -80,7 +82,9 @@ p {
   margin-bottom: 29px; }
 
 .site-header__description {
-  width: 400px; }
+  width: 400px;
+  margin-right: 153px;
+  margin-bottom: 100px; }
 
 .site-header__description h1 {
   margin-bottom: 23px;
@@ -96,10 +100,23 @@ p {
   opacity: 0.8; }
 
 .site-header__contact {
-  padding-top: 5px;
-  width: 327px; }
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 320px;
+  padding-top: 5px; }
 
 .site-header__contact p {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 327px;
   margin-bottom: 18px;
   font-weight: 600;
   font-size: 17px;
@@ -134,6 +151,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    margin-right: 0;
     margin-bottom: 67px;
     padding-bottom: 78px;
     text-align: center;
@@ -156,7 +174,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    /* #0ad9c6; */
     border: none;
     cursor: pointer;
     z-index: 2; }
@@ -199,21 +216,25 @@ p {
 @media (max-width: 767px) {
   .site-header__description p {
     width: 288px; }
+  .site-header__description h1 {
+    width: 288px; }
   .site-header__contact {
+    min-width: 0;
     width: 288px; }
   .site-header__contact p {
+    width: 288px;
     margin-bottom: 18px; } }
 
 .container {
   margin: 0 auto;
-  width: 1440px; }
+  max-width: 1440px; }
 
 @media (max-width: 1023px) {
   .container {
-    width: 100%; } }
+    max-width: 100%; } }
 
 .site-nav {
-  margin-bottom: 256px; }
+  margin-bottom: 257px; }
   .site-nav--opened {
     position: relative; }
 
@@ -253,6 +274,7 @@ p {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
 
 .links-list__item a {
+  margin-right: 20px;
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
@@ -261,6 +283,8 @@ p {
   opacity: 0.7; }
   .links-list__item a:hover {
     opacity: 1; }
+  .links-list__item a:last-child {
+    margin-right: 0; }
 
 @media (max-width: 1023px) {
   .links-list {
@@ -281,6 +305,7 @@ p {
     display: block;
     position: relative;
     height: 60px;
+    margin-right: 0;
     font-size: 20px;
     line-height: 60px;
     color: #48494d;
@@ -335,16 +360,16 @@ p {
     opacity: 0.7; }
 
 @media (max-width: 1023px) {
-  .contact-form__input {
+  .contact-form input {
     padding-top: 3px;
     padding-left: 20px; }
-  .contact-form__input::-webkit-input-placeholder {
+  .contact-form input::-webkit-input-placeholder {
     letter-spacing: 0.3px; }
-  .contact-form__button {
+  .contact-form button {
     letter-spacing: -0.05px; } }
 
 @media (max-width: 767px) {
-  .contact-form__input {
+  .contact-form input {
     padding-left: 25px; } }
 
 .site-footer {
@@ -375,7 +400,7 @@ p {
 .site-footer p {
   width: 555px;
   margin-left: -10px;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
   font-size: 17px;
   line-height: 31px;
   letter-spacing: 0.3px;
@@ -383,12 +408,13 @@ p {
   color: rgba(0, 0, 0, 0.7); }
 
 .site-footer img {
-  margin-bottom: 35px; }
+  margin-bottom: 38px; }
 
 .site-footer__contacts {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 957px;
+  padding-right: 210px;
   padding-left: 237px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,9 +423,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .site-footer a {
   position: relative;
@@ -412,7 +438,6 @@ p {
   color: #0ad9c6; }
 
 .site-footer__email {
-  margin-right: 127px;
   letter-spacing: 0.5px; }
   .site-footer__email::before {
     content: url("../img/icon-mail.svg");
@@ -436,6 +461,7 @@ p {
     height: 545px; }
   .site-footer__contacts {
     width: 698px;
+    padding-right: 80px;
     padding-left: 111px; }
   .site-footer h2 {
     margin-left: 0;
@@ -467,11 +493,13 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 320px;
+    padding-right: 0;
     padding-left: 0; }
   .site-footer__email {
     padding-left: 72px;
     margin-right: 0;
-    margin-bottom: 22px; }
+    margin-bottom: 22px;
+    letter-spacing: 0; }
     .site-footer__email::before {
       left: 31px; }
   .site-footer__phone {
@@ -485,6 +513,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -493,7 +523,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 152px;
-  padding-bottom: 150px; }
+  padding-bottom: 120px; }
 
 .facts h2 {
   margin-bottom: 50px;
@@ -501,6 +531,7 @@ p {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
+  text-align: center;
   letter-spacing: -0.005em;
   color: #1f1f1f; }
 
@@ -514,11 +545,14 @@ p {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1166px; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1440px; }
 
 .facts__list-item {
-  width: 263px;
-  margin-right: 38px;
+  width: 301px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,10 +578,8 @@ p {
 
 @media (max-width: 1023px) {
   .facts__container {
-    padding-top: 35px;
-    padding-right: 106px;
-    padding-left: 106px;
-    padding-bottom: 27px; }
+    padding-top: 37px;
+    padding-bottom: 25px; }
   .facts h2 {
     margin-bottom: 32px;
     padding-left: 0;
@@ -559,6 +591,7 @@ p {
         -ms-flex-pack: center;
             justify-content: center; }
   .facts__list-item {
+    width: 263px;
     margin-right: 0;
     margin-bottom: 42px; }
   .facts__list-item:nth-child(odd) {
@@ -569,6 +602,8 @@ p {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 50px; }
+  .facts h2 {
+    width: 288px; }
   .facts__list-item {
     margin-right: 0;
     margin-bottom: 30px; }
@@ -593,7 +628,7 @@ p {
 
 .bike-types__container {
   padding-top: 154px;
-  padding-bottom: 145px;
+  padding-bottom: 95px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,10 +650,10 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 1126px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1440px;
   padding-left: 25px; }
 
 .bike-types h2 {
@@ -631,7 +666,10 @@ p {
 
 .bike-types__list-item {
   position: relative;
-  text-align: center; }
+  text-align: center;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-bottom: 50px; }
   .bike-types__list-item--roadster {
     padding-top: 10px;
     z-index: 1; }
@@ -640,7 +678,7 @@ p {
       display: block;
       position: absolute;
       top: 166px;
-      left: -60px;
+      left: -35px;
       width: 180px;
       height: 180px;
       border: 27px solid #0ad9c6;
@@ -655,7 +693,7 @@ p {
       display: block;
       position: absolute;
       top: 26px;
-      left: -14px;
+      left: 11px;
       width: 37px;
       height: 37px;
       background-color: #131314; }
@@ -664,7 +702,7 @@ p {
       display: block;
       position: absolute;
       top: 581px;
-      right: -23px;
+      right: 2px;
       width: 47px;
       height: 47px;
       border: 8px solid #0ad9c6;
@@ -675,7 +713,7 @@ p {
     display: block;
     position: absolute;
     top: -32px;
-    right: -36px;
+    right: -11px;
     width: 95px;
     height: 95px;
     border: 17px solid #0ad9c6;
@@ -698,7 +736,7 @@ p {
 @media (max-width: 1023px) {
   .bike-types__container {
     padding-top: 52px;
-    padding-bottom: 20px; }
+    padding-bottom: 15px; }
   .bike-types h2 {
     margin-bottom: 28px;
     padding-left: 10px;
@@ -713,15 +751,14 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    padding-left: 50px; }
+    padding-left: 0; }
   .bike-types__list-item {
-    margin-right: 50px;
-    margin-bottom: 48px; }
+    margin-bottom: 50px; }
     .bike-types__list-item--roadster {
       padding-top: 0; }
       .bike-types__list-item--roadster::before {
         top: 200px;
-        left: -36px;
+        left: -11px;
         width: 127px;
         height: 127px;
         border: 18px solid #0ad9c6; }
@@ -731,7 +768,7 @@ p {
         display: none; }
     .bike-types__list-item--kids::before {
       top: -20px;
-      right: -25px;
+      right: 0;
       width: 68px;
       height: 68px;
       border: 13px solid #0ad9c6; }
@@ -741,16 +778,18 @@ p {
 
 @media (max-width: 767px) {
   .bike-types__container {
-    padding-top: 53px;
+    padding-top: 50px;
     padding-bottom: 12px; }
   .bike-types__list-item {
     margin-bottom: 40px; }
     .bike-types__list-item--roadster::before {
       top: 200px;
-      left: -23px; }
+      left: 2px; }
     .bike-types__list-item--kids::before {
       top: -20px;
-      right: -15px; } }
+      right: 10px; }
+  .bike-types h2 {
+    margin-bottom: 30px; } }
 
 .video {
   height: 706px;
@@ -843,14 +882,14 @@ p {
   .video {
     height: 384px; }
   .video__container {
-    top: 85px; }
+    top: 85px;
+    padding-left: 15px;
+    padding-right: 15px; }
   .video h2 {
     padding-left: 0; }
   .video p {
     width: 100%;
     margin-bottom: 53px;
-    padding-left: 15px;
-    padding-right: 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .video img {

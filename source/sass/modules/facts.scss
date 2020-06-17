@@ -2,11 +2,12 @@
   box-sizing: border-box;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 
   padding-top: 152px;
-  padding-bottom: 150px;
+  padding-bottom: 120px;
 }
 
 .facts h2 {
@@ -17,6 +18,7 @@
   font-size: 30px;
   line-height: 30px;
 
+  text-align: center;
   letter-spacing: -0.005em;
 
   color: #1f1f1f;
@@ -26,13 +28,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 
-  width: 1166px;
+  max-width: 1440px;
 }
 
 .facts__list-item {
-  width: 263px;
-  margin-right: 38px;
+  width: 301px;
+  margin-bottom: 30px;
 
   display: flex;
   flex-direction: column;
@@ -62,10 +65,8 @@
 
 @media (max-width: $tablet-width) {
   .facts__container {
-    padding-top: 35px;
-    padding-right: 106px;
-    padding-left: 106px;
-    padding-bottom: 27px;
+    padding-top: 37px;
+    padding-bottom: 25px;
   }
 
   .facts h2 {
@@ -82,6 +83,8 @@
   }
 
   .facts__list-item {
+    width: 263px;
+
     margin-right: 0;
     margin-bottom: 42px;
   }
@@ -96,6 +99,10 @@
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 50px;
+  }
+
+  .facts h2 {
+    width: 288px;
   }
 
   .facts__list-item {

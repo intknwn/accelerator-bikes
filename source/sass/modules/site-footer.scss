@@ -25,7 +25,7 @@
   width: 555px;
 
   margin-left: -10px;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
 
   font-size: 17px;
   line-height: 31px;
@@ -37,17 +37,19 @@
 }
 
 .site-footer img {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .site-footer__contacts {
   box-sizing: border-box;
   width: 957px;
+
+  padding-right: 210px;
   padding-left: 237px;
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .site-footer a {
@@ -65,7 +67,6 @@
 }
 
 .site-footer__email {
-  margin-right: 127px;
   letter-spacing: 0.5px;
 
   &::before {
@@ -99,6 +100,7 @@
 
   .site-footer__contacts {
     width: 698px;
+    padding-right: 80px;
     padding-left: 111px;
   }
 
@@ -142,6 +144,7 @@
   .site-footer__contacts {
     flex-direction: column;
     width: 320px;
+    padding-right: 0;
     padding-left: 0;
   }
 
@@ -149,6 +152,8 @@
     padding-left: 72px;
     margin-right: 0;
     margin-bottom: 22px;
+
+    letter-spacing: 0;
 
     &::before {
       left: 31px;
