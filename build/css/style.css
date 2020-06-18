@@ -53,9 +53,14 @@ p {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-right: 280px;
-  padding-bottom: 137px;
-  padding-left: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 142px;
   background-image: url("../img/header-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -67,15 +72,16 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 873px; }
 
 .site-header__logo-link {
   display: block;
@@ -138,7 +144,12 @@ p {
             flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0; }
   .site-header__description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -153,7 +164,7 @@ p {
     width: 100%;
     margin-right: 0;
     margin-bottom: 67px;
-    padding-bottom: 78px;
+    padding-bottom: 81px;
     text-align: center;
     background-image: url("../img/header-bg-tablet@1x.jpg");
     background-repeat: no-repeat;
@@ -174,6 +185,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
+    outline: none;
     border: none;
     cursor: pointer;
     z-index: 2; }
@@ -207,7 +219,7 @@ p {
     padding-left: 17px;
     margin-bottom: 73px; }
   .site-header__description {
-    padding-bottom: 68px;
+    padding-bottom: 73px;
     background-image: url("../img/header-bg-mobile@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .site-header__description {
@@ -234,7 +246,9 @@ p {
     max-width: 100%; } }
 
 .site-nav {
-  margin-bottom: 257px; }
+  margin-bottom: 257px;
+  -ms-flex-item-align: center;
+      align-self: center; }
   .site-nav--opened {
     position: relative; }
 
@@ -255,6 +269,7 @@ p {
 .links-list {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 873px;
   padding-top: 22px;
   padding-right: 22px;
   padding-bottom: 7px;
@@ -288,6 +303,8 @@ p {
 
 @media (max-width: 1023px) {
   .links-list {
+    width: 100%;
+    height: 100vh;
     padding: 0;
     padding-top: 100px;
     display: -webkit-box;
@@ -296,7 +313,10 @@ p {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .links-list__item {
     margin-bottom: 30px;
     padding-left: 16px;
@@ -333,17 +353,40 @@ p {
           box-sizing: border-box;
   height: 48px;
   margin-bottom: 20px;
-  padding-top: 10px;
   padding-left: 29px;
+  line-height: 48px;
   background-color: #ffffff;
   border: 1px solid #c9ccd4;
   border-radius: 4px; }
 
 .contact-form input::-webkit-input-placeholder {
   font-size: 15px;
-  line-height: 24px;
+  line-height: 48px;
   color: #1c1c1c;
-  vertical-align: bottom;
+  opacity: 0.7; }
+
+.contact-form input::-moz-placeholder {
+  font-size: 15px;
+  line-height: 48px;
+  color: #1c1c1c;
+  opacity: 0.7; }
+
+.contact-form input:-ms-input-placeholder {
+  font-size: 15px;
+  line-height: 48px;
+  color: #1c1c1c;
+  opacity: 0.7; }
+
+.contact-form input::-ms-input-placeholder {
+  font-size: 15px;
+  line-height: 48px;
+  color: #1c1c1c;
+  opacity: 0.7; }
+
+.contact-form input::placeholder {
+  font-size: 15px;
+  line-height: 48px;
+  color: #1c1c1c;
   opacity: 0.7; }
 
 .contact-form button {
@@ -361,12 +404,20 @@ p {
 
 @media (max-width: 1023px) {
   .contact-form input {
-    padding-top: 3px;
     padding-left: 20px; }
   .contact-form input::-webkit-input-placeholder {
     letter-spacing: 0.3px; }
+  .contact-form input::-moz-placeholder {
+    letter-spacing: 0.3px; }
+  .contact-form input:-ms-input-placeholder {
+    letter-spacing: 0.3px; }
+  .contact-form input::-ms-input-placeholder {
+    letter-spacing: 0.3px; }
+  .contact-form input::placeholder {
+    letter-spacing: 0.3px; }
   .contact-form button {
-    letter-spacing: -0.05px; } }
+    letter-spacing: -0.05px;
+    outline: none; } }
 
 @media (max-width: 767px) {
   .contact-form input {
@@ -414,8 +465,7 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 957px;
-  padding-right: 210px;
-  padding-left: 237px;
+  padding-left: 197px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,18 +473,24 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
-.site-footer a {
+.site-footer__contacts-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 358px;
+  margin-bottom: 15px;
+  padding-left: 41px; }
+
+.site-footer__contacts a {
   position: relative;
   font-size: 16px;
   line-height: 22px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5); }
 
-.site-footer a:hover {
+.site-footer__contacts a:hover {
   color: #0ad9c6; }
 
 .site-footer__email {
@@ -456,13 +512,16 @@ p {
     padding-top: 155px;
     padding-bottom: 45px; }
   .site-footer img {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     width: 698px;
     height: 545px; }
   .site-footer__contacts {
     width: 698px;
-    padding-right: 80px;
-    padding-left: 111px; }
+    padding-left: 70px; }
+  .site-footer__contacts-item {
+    width: 358px; }
+  .site-footer__contacts-item:nth-child(even) {
+    width: 270px; }
   .site-footer h2 {
     margin-left: 0;
     margin-bottom: 20px;
@@ -492,20 +551,28 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 320px;
     padding-right: 0;
     padding-left: 0; }
+  .site-footer__contacts-item {
+    width: 268px;
+    text-align: center;
+    margin-bottom: 27px; }
+  .site-footer__contacts-item:nth-child(even) {
+    width: 268px; }
   .site-footer__email {
-    padding-left: 72px;
     margin-right: 0;
-    margin-bottom: 22px;
+    margin-bottom: 27px;
     letter-spacing: 0; }
     .site-footer__email::before {
-      left: 31px; }
+      left: -40px; }
   .site-footer__phone {
-    padding-left: 97px; }
+    margin-left: -10px; }
     .site-footer__phone::before {
-      left: 60px; } }
+      left: -36px; } }
 
 .facts__container {
   -webkit-box-sizing: border-box;
@@ -579,7 +646,7 @@ p {
 @media (max-width: 1023px) {
   .facts__container {
     padding-top: 37px;
-    padding-bottom: 25px; }
+    padding-bottom: 30px; }
   .facts h2 {
     margin-bottom: 32px;
     padding-left: 0;
@@ -601,7 +668,7 @@ p {
   .facts__container {
     padding-right: 0;
     padding-left: 0;
-    padding-bottom: 50px; }
+    padding-bottom: 52px; }
   .facts h2 {
     width: 288px; }
   .facts__list-item {
@@ -617,7 +684,7 @@ p {
   .facts__list-item--delivery h3 {
     margin-bottom: 10px; }
   .facts__list-item--accessories {
-    margin-bottom: 60px; }
+    margin-bottom: 65px; }
   .facts__list-item--accessories h3 {
     margin-bottom: 5px; }
   .facts__list-item--support h3 {
@@ -627,7 +694,7 @@ p {
   background-color: #f6f7f9; }
 
 .bike-types__container {
-  padding-top: 154px;
+  padding-top: 155px;
   padding-bottom: 95px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -736,7 +803,7 @@ p {
 @media (max-width: 1023px) {
   .bike-types__container {
     padding-top: 52px;
-    padding-bottom: 15px; }
+    padding-bottom: 20px; }
   .bike-types h2 {
     margin-bottom: 28px;
     padding-left: 10px;
@@ -781,7 +848,7 @@ p {
     padding-top: 50px;
     padding-bottom: 12px; }
   .bike-types__list-item {
-    margin-bottom: 40px; }
+    margin-bottom: 42px; }
     .bike-types__list-item--roadster::before {
       top: 200px;
       left: 2px; }
@@ -870,7 +937,8 @@ p {
     height: 90px;
     top: calc(50% - 45px);
     left: calc(50% - 45px);
-    background-size: 90px; }
+    background-size: 90px;
+    outline: none; }
     .video__play-button:active {
       width: 80px;
       height: 80px;

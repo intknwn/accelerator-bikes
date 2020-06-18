@@ -41,9 +41,9 @@
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <form class="contact-form" action="#">
             <label class="visually-hidden" for="name-input">Имя:</label>
-            <input type="text" name="name" id="name-input" placeholder="Введите Ваше Имя">
+            <input type="text" name="name" id="name-input" placeholder="Введите Ваше Имя" required="">
             <label class="visually-hidden" for="phone-input">Номер телефона:</label>
-            <input type="tel" name="phone" id="phone-input" placeholder="Введите Ваш номер телефона">
+            <input type="tel" name="phone" id="phone-input" placeholder="Введите Ваш номер телефона" required="">
             <button class="button" type="submit">Подобрать велосипед мечты</button>
           </form>
         </section>
@@ -155,10 +155,14 @@
         <!-- 1х: 957px; 2x: 1914px -->
         <img src="img/map-desktop@1x.png" width="957" height="530" srcset="img/map-desktop@2x.png 2x" alt="Карта расположения офиса компании «Moon»">
       </picture>
-      <div class="site-footer__contacts">
-        <a class="site-footer__email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-        <a class="site-footer__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
-      </div>
+      <ul class="site-footer__contacts">
+        <li class="site-footer__contacts-item">
+          <a class="site-footer__email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+        </li>
+        <li class="site-footer__contacts-item">
+          <a class="site-footer__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        </li>
+      </ul>
     </div>
   </footer>
   <script src="js/vendor.js"></script>

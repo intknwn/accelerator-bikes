@@ -3,7 +3,7 @@
 }
 
 .bike-types__container {
-  padding-top: 154px;
+  padding-top: 155px;
   padding-bottom: 95px;
 
   display: flex;
@@ -132,7 +132,7 @@
 @media (max-width: $tablet-width) {
   .bike-types__container {
     padding-top: 52px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
 
   .bike-types h2 {
@@ -203,7 +203,7 @@
   }
 
   .bike-types__list-item {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 
     &--roadster {
       &::before {

@@ -9,20 +9,19 @@
 
   margin-bottom: 20px;
 
-  padding-top: 10px;
   padding-left: 29px;
+
+  line-height: 48px;
 
   background-color: #ffffff;
   border: 1px solid #c9ccd4;
   border-radius: 4px;
 }
 
-.contact-form input::-webkit-input-placeholder {
+.contact-form input::placeholder {
   font-size: 15px;
-  line-height: 24px;
+  line-height: 48px;
   color: #1c1c1c;
-
-  vertical-align: bottom;
 
   opacity: 0.7;
 }
@@ -48,16 +47,16 @@
 
 @media (max-width: $tablet-width) {
   .contact-form input {
-    padding-top: 3px;
     padding-left: 20px;
   }
 
-  .contact-form input::-webkit-input-placeholder {
+  .contact-form input::placeholder {
     letter-spacing: 0.3px;
   }
 
   .contact-form button {
     letter-spacing: -0.05px;
+    outline: none;
   }
 }
 
