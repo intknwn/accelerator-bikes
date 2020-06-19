@@ -42,6 +42,9 @@ p {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.fixed {
+  position: fixed; }
+
 .site-header {
   color: #ffffff;
   background-color: #000000; }
@@ -845,8 +848,8 @@ p {
 
 @media (max-width: 767px) {
   .bike-types__container {
-    padding-top: 50px;
-    padding-bottom: 12px; }
+    padding-top: 52px;
+    padding-bottom: 10px; }
   .bike-types__list-item {
     margin-bottom: 42px; }
     .bike-types__list-item--roadster::before {
@@ -856,7 +859,7 @@ p {
       top: -20px;
       right: 10px; }
   .bike-types h2 {
-    margin-bottom: 30px; } }
+    margin-bottom: 29px; } }
 
 .video {
   height: 706px;
@@ -957,7 +960,7 @@ p {
     padding-left: 0; }
   .video p {
     width: 100%;
-    margin-bottom: 53px;
+    margin-bottom: 54px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .video img {
@@ -966,7 +969,7 @@ p {
   .video__play-button {
     width: 65px;
     height: 65px;
-    top: calc(50% - 36px);
+    top: calc(50% - 35px);
     left: calc(50% - 32px);
     background-size: 65px; }
     .video__play-button:active {
