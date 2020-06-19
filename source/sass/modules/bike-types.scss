@@ -72,13 +72,14 @@
       content: "";
       display: block;
       position: absolute;
-      top: 26px;
-      left: 11px;
+      top: 20px;
+      left: 7px;
 
-      width: 37px;
-      height: 37px;
+      width: 47px;
+      height: 47px;
 
-      background-color: #131314;
+      border: 8px solid #0ad9c6;
+      box-sizing: border-box;
     }
 
     &::after {

@@ -66,7 +66,8 @@ p {
   padding-bottom: 142px;
   background-image: url("../img/header-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
     .site-header__container {
       background-image: url("../img/header-bg-desktop@2x.jpg"); } }
@@ -762,11 +763,13 @@ p {
       content: "";
       display: block;
       position: absolute;
-      top: 26px;
-      left: 11px;
-      width: 37px;
-      height: 37px;
-      background-color: #131314; }
+      top: 20px;
+      left: 7px;
+      width: 47px;
+      height: 47px;
+      border: 8px solid #0ad9c6;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
     .bike-types__list-item--mountain::after {
       content: "";
       display: block;

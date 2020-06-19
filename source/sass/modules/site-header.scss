@@ -20,6 +20,7 @@
   background-image: url("../img/header-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/header-bg-desktop@2x.jpg");
